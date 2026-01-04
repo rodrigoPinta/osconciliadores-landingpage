@@ -16,6 +16,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background-color: #f5f0e8;
@@ -109,8 +113,8 @@
         }
 
         .btn-demonstracao {
-            background: #e8dfd3;
-            color: #4a5568;
+            background: linear-gradient(to bottom, #d4a574, #b8935f);
+            color: #ffffff;
             border: none;
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
@@ -144,29 +148,36 @@
             gap: 0;
         }
 
+        .subtitle-container {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
         .subtitle {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 1rem;
-            background-color: #f0eae0;
-            border: 1px solid #d4c4b0;
+            background: linear-gradient(to bottom, #d4a574, #b8935f);
+            border: none;
             border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 500;
-            color: #374151;
+            color: #ffffff;
             text-transform: none;
             letter-spacing: normal;
             width: fit-content;
-            margin-bottom: 1rem;
-            margin-top: 0;
         }
 
         .subtitle::before {
             content: '';
             width: 8px;
             height: 8px;
-            background-color: #10b981;
+            background-color: #ffffff;
             border-radius: 50%;
             flex-shrink: 0;
         }
@@ -209,8 +220,8 @@
         }
 
         .btn-primary {
-            background: #e8dfd3;
-            color: #4a5568;
+            background: linear-gradient(to bottom, #d4a574, #b8935f);
+            color: #ffffff;
             border: none;
             padding: 0.875rem 1.5rem;
             border-radius: 8px;
@@ -254,7 +265,7 @@
 
         .btn-primary .arrow-icon {
             font-size: 1rem;
-            color: #4a5568;
+            color: #ffffff;
         }
 
         .btn-secondary {
@@ -414,6 +425,659 @@
             border-radius: 2px;
         }
 
+        /* Problems Section */
+        .problems-section {
+            background-color: #f5f0e8;
+            padding: 6rem 0;
+        }
+
+        .section-headline {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-headline .highlight {
+            color: #c9a882;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .problems-list {
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .problem-item {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .problem-bullet {
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(to bottom, #d4a574, #b8935f);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.5rem;
+        }
+
+        .problem-content {
+            flex: 1;
+        }
+
+        .problem-content p {
+            font-size: 1.1rem;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .problem-content strong {
+            color: #1f2937;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            background-color: #f5f0e8;
+            padding: 6rem 0;
+        }
+
+        .resources-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3%;
+        }
+
+        .resources-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .resources-headline {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            margin-bottom: 1rem;
+        }
+
+        .resources-subtitle {
+            font-size: 1.2rem;
+            color: #4a5568;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .resource-card {
+            background: #FBF9F6;
+            border: 1px solid #E7E0D6;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .resource-icon {
+            width: 48px;
+            height: 48px;
+            background: #EFE9DF;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+            color: #B7791F;
+            font-weight: bold;
+            position: relative;
+        }
+
+        /* Icon shapes using CSS */
+        .icon-square-nested::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid #B7791F;
+            position: absolute;
+        }
+
+        .icon-square-nested::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #B7791F;
+            position: absolute;
+        }
+
+        .icon-circle-check::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border: 2px solid #B7791F;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .icon-circle-check::after {
+            content: '✓';
+            position: absolute;
+            font-size: 14px;
+            color: #B7791F;
+        }
+
+        .icon-gear::before {
+            content: '⚙';
+            position: absolute;
+            color: #B7791F;
+        }
+
+        .icon-braces::before {
+            content: '{ }';
+            position: absolute;
+            font-family: monospace;
+            color: #B7791F;
+        }
+
+        .icon-document::before {
+            content: '';
+            width: 16px;
+            height: 20px;
+            border: 2px solid #B7791F;
+            position: absolute;
+            border-radius: 2px;
+        }
+
+        .icon-document::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #B7791F;
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-speech::before {
+            content: '';
+            width: 20px;
+            height: 16px;
+            border: 2px solid #B7791F;
+            border-radius: 12px 12px 12px 2px;
+            position: absolute;
+        }
+
+        .icon-speech::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #B7791F;
+            position: absolute;
+            bottom: -4px;
+            left: 4px;
+        }
+
+        .icon-stack::before {
+            content: '';
+            width: 20px;
+            height: 4px;
+            background: #B7791F;
+            position: absolute;
+            top: 12px;
+            box-shadow: 0 -8px 0 #B7791F, 0 8px 0 #B7791F;
+        }
+
+        .icon-magnify::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            border: 2px solid #B7791F;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .icon-magnify::after {
+            content: '';
+            width: 8px;
+            height: 2px;
+            background: #B7791F;
+            position: absolute;
+            bottom: 8px;
+            right: 6px;
+            transform: rotate(45deg);
+        }
+
+        /* Layers Icon (for Classificação de divergências) */
+        .icon-layers::before {
+            content: '';
+            width: 20px;
+            height: 4px;
+            background: #B7791F;
+            position: absolute;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 -6px 0 #B7791F, 0 6px 0 #B7791F, 0 12px 0 #B7791F;
+        }
+
+        .icon-layers::after {
+            content: '';
+            width: 16px;
+            height: 2px;
+            background: #B7791F;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Alert Icon (for Alertas e riscos operacionais) */
+        .icon-alert::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 14px solid #B7791F;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-alert::after {
+            content: '';
+            width: 2px;
+            height: 6px;
+            background: #EFE9DF;
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 0 #EFE9DF;
+        }
+
+        .resource-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            text-align: center;
+        }
+
+        .resource-description {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
+        /* Reconciliation Types Section (Continuation of Resources) */
+        .reconciliation-types {
+            margin-top: 5rem;
+            padding-top: 5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .reconciliation-types-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .reconciliation-types-title {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            margin-bottom: 1rem;
+        }
+
+        .reconciliation-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .reconciliation-card {
+            background: #FBF9F6;
+            border: 1px solid #E7E0D6;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .reconciliation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .status-badge.complete {
+            background-color: #EFE9DF;
+            color: #B7791F;
+        }
+
+        .status-badge.complete::before {
+            content: '✓';
+            font-size: 0.75rem;
+            font-weight: bold;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .reconciliation-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 1.5rem;
+            margin-top: 0.5rem;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        }
+
+        .reconciliation-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reconciliation-feature {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .reconciliation-feature:last-child {
+            margin-bottom: 0;
+        }
+
+        .reconciliation-bullet {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(to bottom, #d4a574, #b8935f);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.4rem;
+            align-self: flex-start;
+        }
+
+        .reconciliation-feature-text {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        /* Reliability Section */
+        .reliability-section {
+            background-color: #f5f0e8;
+            padding: 6rem 0;
+        }
+
+        .reliability-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .reliability-title {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            margin-bottom: 1rem;
+        }
+
+        .reliability-title .highlight-word {
+            font-size: 1.1em;
+            font-weight: 800;
+        }
+
+        .reliability-cards {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(200px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .reliability-card {
+            background: #FBF9F6;
+            border: 1px solid #E7E0D6;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .reliability-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .reliability-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #EFE9DF;
+            border-radius: 14px;
+        }
+
+        /* Stack of Disks Icon */
+        .icon-stack-disks::before {
+            content: '';
+            width: 20px;
+            height: 5px;
+            border: 1px solid #6b5d4f;
+            border-radius: 50%;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 -8px 0 #6b5d4f, 0 8px 0 #6b5d4f;
+        }
+
+        .icon-stack-disks::after {
+            content: '';
+            width: 20px;
+            height: 5px;
+            border: 1px solid #6b5d4f;
+            border-radius: 50%;
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Eye Icon */
+        .icon-eye::before {
+            content: '';
+            width: 24px;
+            height: 14px;
+            border: 1px solid #6b5d4f;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-eye::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #6b5d4f;
+            border-radius: 50%;
+            position: absolute;
+            top: 17px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Chain Link Icon */
+        .icon-chain::before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            border: 1px solid #6b5d4f;
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            left: 9px;
+        }
+
+        .icon-chain::after {
+            content: '';
+            width: 14px;
+            height: 14px;
+            border: 1px solid #6b5d4f;
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            right: 9px;
+        }
+
+        /* Clipboard with Checkmark Icon */
+        .icon-clipboard-check::before {
+            content: '';
+            width: 14px;
+            height: 18px;
+            border: 1px solid #6b5d4f;
+            border-radius: 2px;
+            position: absolute;
+            top: 11px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-clipboard-check::after {
+            content: '✓';
+            position: absolute;
+            font-size: 10px;
+            color: #6b5d4f;
+            font-weight: bold;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Padlock Icon */
+        .icon-padlock::before {
+            content: '';
+            width: 14px;
+            height: 11px;
+            border: 1px solid #6b5d4f;
+            border-radius: 2px;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-padlock::after {
+            content: '';
+            width: 10px;
+            height: 6px;
+            border: 1px solid #6b5d4f;
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            position: absolute;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .reliability-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            line-height: 1.25;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        }
+
+        .reliability-card-subtitle {
+            font-size: 0.875rem;
+            color: #4a5568;
+            line-height: 1.5;
+            margin: 0;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .container {
@@ -428,6 +1092,33 @@
             .illustration {
                 min-height: 400px;
             }
+
+            .resources-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .resources-headline {
+                font-size: 2.25rem;
+            }
+
+            .reconciliation-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .reconciliation-types-title {
+                font-size: 2.25rem;
+            }
+
+            .reliability-cards {
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+                gap: 2rem;
+            }
+
+            .reliability-title {
+                font-size: 2.25rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -441,6 +1132,18 @@
 
             .headline {
                 font-size: 2rem;
+            }
+
+            .section-headline {
+                font-size: 2rem;
+            }
+
+            .section-description {
+                font-size: 1.05rem;
+            }
+
+            .problem-content p {
+                font-size: 1rem;
             }
 
             .cta-buttons {
@@ -460,6 +1163,329 @@
                 width: 80px;
                 height: 150px;
             }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .resources-headline {
+                font-size: 1.875rem;
+            }
+
+            .resources-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .resource-card {
+                padding: 1.5rem;
+            }
+
+            .reliability-card {
+                padding: 1.5rem;
+            }
+
+            .cta-card {
+                padding: 1.5rem;
+            }
+
+            .resource-title {
+                font-size: 1.125rem;
+            }
+
+            .resource-description {
+                font-size: 0.9rem;
+            }
+
+            .reconciliation-types {
+                margin-top: 3rem;
+                padding-top: 3rem;
+            }
+
+            .reconciliation-types-title {
+                font-size: 2rem;
+            }
+
+            .reconciliation-card {
+                padding: 1.5rem;
+            }
+
+            .reconciliation-card-title {
+                font-size: 1.25rem;
+            }
+
+            .reconciliation-feature-text {
+                font-size: 0.9rem;
+            }
+
+            .reliability-section {
+                padding: 3rem 0;
+            }
+
+            .reliability-title {
+                font-size: 2rem;
+            }
+
+            .reliability-cards {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .reliability-card {
+                padding: 1.5rem;
+            }
+
+            .reliability-card-title {
+                font-size: 1rem;
+            }
+
+            .reliability-card-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .faq-headline {
+                font-size: 2rem;
+            }
+
+            .faq-item {
+                padding: 1.25rem 1.5rem;
+            }
+
+            .faq-question-text {
+                font-size: 1rem;
+            }
+
+            .faq-answer-text {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f5f0e8;
+            padding: 6rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 3%;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-headline {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            margin-bottom: 0;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: #FBF9F6;
+            border: 1px solid #E7E0D6;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question-text {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            line-height: 1.4;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        .faq-chevron {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1rem;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: #374151;
+        }
+
+        .faq-chevron::before {
+            content: '▼';
+            font-size: 12px;
+        }
+
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 1rem;
+        }
+
+        .faq-answer-text {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* CTA Card Section */
+        .cta-card-section {
+            background-color: #f5f0e8;
+            padding: 6rem 0;
+        }
+
+        .cta-card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 3%;
+        }
+
+        .cta-card {
+            background: #FBF9F6;
+            border: 1px solid #E7E0D6;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            text-align: left;
+        }
+
+        .cta-card-heading {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #374151;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            margin-bottom: 1rem;
+        }
+
+        .cta-card-description {
+            font-size: 1.125rem;
+            color: #4a5568;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin-bottom: 2rem;
+        }
+
+        .cta-card-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Responsive Design for CTA */
+        @media (max-width: 768px) {
+            .cta-card {
+                padding: 1.5rem;
+            }
+
+            .cta-card-heading {
+                font-size: 2.25rem;
+            }
+
+            .cta-card-description {
+                font-size: 1rem;
+            }
+
+            .cta-card-buttons {
+                flex-direction: column;
+            }
+
+            .cta-card-buttons .btn {
+                width: 100%;
+            }
+
+            .footer {
+                padding: 2rem 0;
+            }
+
+            .footer-copyright {
+                font-size: 0.95rem;
+            }
+
+            .footer-credit {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Footer Section */
+        .footer {
+            background: linear-gradient(to bottom, #d4a574, #b8935f);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3%;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 1rem;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .footer-credit {
+            font-size: 0.875rem;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .footer-credit .highlight {
+            color: #ffffff;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -474,9 +1500,9 @@
                 <div class="logo">Os Conciliadores</div>
             </div>
             <ul class="nav-links">
-                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#problemas">Problemas</a></li>
                 <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#precos">Preços</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
             <div class="nav-buttons">
                 <button class="btn-entrar">Entrar</button>
@@ -490,7 +1516,10 @@
         <div class="container">
         <!-- Left Content -->
         <div class="content">
-            <div class="subtitle">Automação Contábil com IA</div>
+            <div class="subtitle-container">
+                <div class="subtitle">Automação Contábil com IA</div>
+                <div class="subtitle">Rigor Contábil</div>
+            </div>
             <h1 class="headline">
                 Conciliação<br>
                 financeira<br>
@@ -518,5 +1547,428 @@
         </div>
         </div>
     </main>
+
+    <!-- Problems Section -->
+    <section id="problemas" class="problems-section">
+        <div class="container" style="grid-template-columns: 1fr; max-width: 1000px;">
+            <div class="content" style="align-items: center;">
+                <h2 class="section-headline">
+                    O custo das<br>
+                    <span class="highlight">conciliações manuais</span>
+                </h2>
+                <p class="section-description">
+                    As conciliações manuais não escalam. Anomalias críticas passam despercebidas, custando tempo às equipes contábeis e expondo organizações a riscos.
+                </p>
+                
+                <div class="problems-list">
+                    <div class="problem-item">
+                        <div class="problem-bullet"></div>
+                        <div class="problem-content">
+                            <p>
+                                <strong>As conciliações manuais não escalam.</strong> Grandes volumes de dados exigem horas de atenção humana, e anomalias críticas passam despercebidas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-bullet"></div>
+                        <div class="problem-content">
+                            <p>
+                                <strong>Tempo excessivo gasto em tarefas repetitivas.</strong> Profissionais contábeis dedicam até 70% do tempo em atividades manuais que poderiam ser automatizadas, reduzindo a capacidade de análise estratégica.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-bullet"></div>
+                        <div class="problem-content">
+                            <p>
+                                <strong>Erros humanos comprometem a precisão.</strong> Processos manuais são suscetíveis a falhas, com taxas de erro que podem chegar a 15-20%, gerando retrabalho e inconsistências nos relatórios.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-bullet"></div>
+                        <div class="problem-content">
+                            <p>
+                                <strong>Divergências duplicadas passam despercebidas.</strong> Sem detecção sistemática, as mesmas transações podem ser processadas múltiplas vezes, causando inconsistências contábeis.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-bullet"></div>
+                        <div class="problem-content">
+                            <p>
+                                <strong>Anomalias se escondem em grandes volumes.</strong> Outliers estatísticos e padrões irregulares requerem análise especializada para serem identificados, algo difícil de fazer manualmente.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-bullet"></div>
+                        <div class="problem-content">
+                            <p>
+                                <strong>Ferramentas tradicionais carecem de raciocínio.</strong> Sistemas baseados em regras falham em capturar padrões contextuais; eles sinalizam tudo ou nada, sem a nuance necessária.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="recursos" class="resources-section">
+        <div class="resources-container">
+            <div class="resources-header">
+                <h2 class="resources-headline">
+                    Recursos essenciais para<br>
+                    conciliação confiável
+                </h2>
+                <p class="resources-subtitle">
+                    Determinístico primeiro. IA para explicar e orientar.
+                </p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Row 1: Deterministic Foundation -->
+                <div class="resource-card">
+                    <div class="resource-icon icon-square-nested"></div>
+                    <h3 class="resource-title">Integridade matemática</h3>
+                    <p class="resource-description">
+                        Validação automática: saldo inicial + movimentações = saldo final. Garante consistência matemática do razão contábil.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-circle-check"></div>
+                    <h3 class="resource-title">Totalidade e completude</h3>
+                    <p class="resource-description">
+                        Detecção de dados faltantes, períodos incompletos e lacunas no razão. Sinaliza inconsistências antes da análise de IA.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-gear"></div>
+                    <h3 class="resource-title">Validações determinísticas</h3>
+                    <p class="resource-description">
+                        Regras executadas antes da IA (checks auditáveis). Duplicatas, cut-off, consistência entre contas. Resultados reproduzíveis.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-braces"></div>
+                    <h3 class="resource-title">Análise inteligente</h3>
+                    <p class="resource-description">
+                        IA organiza achados, classifica divergências e explica causas prováveis. Não calcula, não altera, apenas interpreta.
+                    </p>
+                </div>
+
+                <!-- Row 2: Coverage & Trust -->
+                <div class="resource-card">
+                    <div class="resource-icon icon-document"></div>
+                    <h3 class="resource-title">Múltiplos formatos</h3>
+                    <p class="resource-description">
+                        Suporte a layouts legacy (débito/crédito) e moderno (amount/type). Compatível com principais ERPs e extratos bancários.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-speech"></div>
+                    <h3 class="resource-title">Explicabilidade</h3>
+                    <p class="resource-description">
+                        Relatórios claros para contador e cliente final. Cada alerta explica origem: documento, lançamento ou regra aplicada.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-stack"></div>
+                    <h3 class="resource-title">Preservação de dados</h3>
+                    <p class="resource-description">
+                        Não recalcula, não altera, não substitui seus números. Mantém integridade dos dados originais para auditoria.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-magnify"></div>
+                    <h3 class="resource-title">Evidências e rastreabilidade</h3>
+                    <p class="resource-description">
+                        Mostra de onde vem cada alerta (documento/lançamento/regra). Rastreabilidade completa para defesa em auditoria.
+                    </p>
+                </div>
+
+                <!-- Row 3: New Features -->
+                <div class="resource-card">
+                    <div class="resource-icon icon-layers"></div>
+                    <h3 class="resource-title">Classificação de divergências</h3>
+                    <p class="resource-description">
+                        Identifica diferenças temporárias e permanentes, separando efeitos de timing, erros operacionais e ajustes esperados. Ajuda a priorizar correções e decisões contábeis.
+                    </p>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon icon-alert"></div>
+                    <h3 class="resource-title">Alertas e riscos operacionais</h3>
+                    <p class="resource-description">
+                        Gera alertas claros para saldos atípicos, padrões incomuns e riscos operacionais relevantes. Foco em materialidade, sem excesso de ruído.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Reconciliation Types Continuation -->
+            <div class="reconciliation-types">
+                <div class="reconciliation-types-header">
+                    <h2 class="reconciliation-types-title">
+                        O que você consegue conciliar
+                    </h2>
+                </div>
+
+                <div class="reconciliation-cards">
+                    <!-- Card 1: Cash -->
+                    <div class="reconciliation-card">
+                        <div class="status-badge complete">100% completo</div>
+                        <h3 class="reconciliation-card-title">Caixa e Equivalentes</h3>
+                        <ul class="reconciliation-features">
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Conciliação de saldo inicial e final</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Conciliação entre extrato bancário e razão</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Análise de movimentações (débito/crédito)</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Integridade matemática e cutoff</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Detecção de saldo negativo e avaliação de materialidade</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Accounts Receivable -->
+                    <div class="reconciliation-card">
+                        <div class="status-badge complete">100% completo</div>
+                        <h3 class="reconciliation-card-title">Contas a Receber</h3>
+                        <ul class="reconciliation-features">
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Aging (0-30 / 31-60 / 61-90 / 90+)</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Concentração de clientes e risco de recebimento</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Classificação e leitura de liquidações/aplicações</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Cutoff e validações por período</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Accounts Payable -->
+                    <div class="reconciliation-card">
+                        <div class="status-badge complete">100% completo</div>
+                        <h3 class="reconciliation-card-title">Contas a Pagar</h3>
+                        <ul class="reconciliation-features">
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Aging de fornecedores</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Consolidação por fornecedor</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Detecção de duplicidades (faturas)</span>
+                            </li>
+                            <li class="reconciliation-feature">
+                                <div class="reconciliation-bullet"></div>
+                                <span class="reconciliation-feature-text">Cutoff (data de documento vs pagamento)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reliability Section -->
+            <div class="reliability-section">
+                <div class="reliability-header">
+                    <h2 class="reliability-title">Confiável para rotinas <span class="highlight-word">contábeis</span></h2>
+                </div>
+                <div class="reliability-cards">
+                    <!-- Card 1: Data Preservation -->
+                    <div class="reliability-card">
+                        <div class="reliability-icon icon-stack-disks"></div>
+                        <h3 class="reliability-card-title">Preservação dos dados</h3>
+                        <p class="reliability-card-subtitle">Não altera origem</p>
+                    </div>
+
+                    <!-- Card 2: Explainability -->
+                    <div class="reliability-card">
+                        <div class="reliability-icon icon-eye"></div>
+                        <h3 class="reliability-card-title">Explicabilidade por padrão</h3>
+                        <p class="reliability-card-subtitle">Tudo é transparente e compreensível</p>
+                    </div>
+
+                    <!-- Card 3: Alert Traceability -->
+                    <div class="reliability-card">
+                        <div class="reliability-icon icon-chain"></div>
+                        <h3 class="reliability-card-title">Rastreabilidade de alertas</h3>
+                        <p class="reliability-card-subtitle">Cada alerta tem sua origem documentada</p>
+                    </div>
+
+                    <!-- Card 4: Internal Audit Ready -->
+                    <div class="reliability-card">
+                        <div class="reliability-icon icon-clipboard-check"></div>
+                        <h3 class="reliability-card-title">Pronto para auditoria interna</h3>
+                        <p class="reliability-card-subtitle">Linguagem de evidências e critérios</p>
+                    </div>
+
+                    <!-- Card 5: Access Practices -->
+                    <div class="reliability-card">
+                        <div class="reliability-icon icon-padlock"></div>
+                        <h3 class="reliability-card-title">Boas práticas de acesso</h3>
+                        <p class="reliability-card-subtitle">Login/perfis/ambiente seguros</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2 class="faq-headline">Perguntas frequentes</h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <p class="faq-question-text">A IA altera meus números?</p>
+                        <span class="faq-chevron"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">
+                            Não. A IA não altera, não recalcula e não substitui seus números. 
+                            Ela apenas analisa, interpreta e explica os dados, preservando a 
+                            integridade dos dados originais para auditoria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <p class="faq-question-text">Quais formatos são suportados?</p>
+                        <span class="faq-chevron"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">
+                            Suportamos layouts legacy (débito/crédito) e moderno (amount/type). 
+                            Compatível com principais ERPs e extratos bancários, incluindo 
+                            formatos CSV, Excel e integrações diretas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <p class="faq-question-text">Serve para escritório contábil?</p>
+                        <span class="faq-chevron"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">
+                            Sim. Os Conciliadores foi desenvolvido pensando em escritórios contábeis. Oferece rastreabilidade completa, linguagem de 
+                            evidências e critérios, pronto para defesa em auditoria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <p class="faq-question-text">O que é determinístico?</p>
+                        <span class="faq-chevron"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">
+                            Determinístico significa que as validações seguem regras fixas e 
+                            reproduzíveis, executadas antes da análise de IA. Isso inclui checks 
+                            de duplicatas, cut-off, consistência entre contas - resultados sempre 
+                            auditáveis e reproduzíveis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Card Section -->
+    <section class="cta-card-section">
+        <div class="cta-card-container">
+            <div class="cta-card">
+                <h2 class="cta-card-heading">Veja Os Conciliadores em ação</h2>
+                <p class="cta-card-description">
+                    Leve conciliação com rigor contábil, explicabilidade e confiança para sua rotina.
+                </p>
+                <div class="cta-card-buttons">
+                    <button class="btn btn-primary">Solicitar demonstração</button>
+                    <button class="btn btn-secondary">Ver como funciona</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-copyright">
+                    © 2026 Os Conciliadores. Construído por profissionais de contabilidade.
+                </p>
+                <p class="footer-credit">
+                    Desenvolvido por <span class="highlight">Stack 4U</span>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
